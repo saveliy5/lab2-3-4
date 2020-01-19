@@ -1,18 +1,24 @@
 {
-  "name": "lab-2-3-4",
+  "name": "sdt-labs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js --open",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "test": "jest"
   },
-  "author": "Saveliy Savelev",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/runtime": "^7.7.7",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
     "css-loader": "^3.4.0",
-    "cypress": "^3.8.0",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
     "style-loader": "^1.1.0",
     "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",

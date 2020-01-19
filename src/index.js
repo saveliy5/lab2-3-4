@@ -1,16 +1,17 @@
-import article from './Article';
-import api from './API';
+import articleConstructor from './articleConstructor';
+import api from './api';
 
 import './index.css';
 
 const root = document.getElementById('root');
 
+let url = 'https://en.wikipedia.org/w/api.php?origin=*';
+
 let articlesInfo = [];
 
 api().then(json => {
-  console.log(json.query.pages);
   Object.values(json.query.pages).forEach(props => {
-    articlesInfo.push(article(props));
+    articlesInfo.push(articleConstructor(props));
   });
 
   let ul = document.createElement('ul');
